@@ -7,6 +7,24 @@ package abstraccion;
 
 
 public class Usuario {
-    float altura;
-    float peso;
-}
+ float altura;
+ float peso;
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura =altura;
+    }
+
+    public float getPeso() {
+        return peso;
+    }
+
+    public void setPeso(float peso) {
+        this.peso =peso;
+    }
+    
+
+    }
