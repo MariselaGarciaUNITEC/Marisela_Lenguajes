@@ -15,7 +15,7 @@ public class GeneradorCuestionario {
     public ArrayList<Pregunta> generar(){
 //Primero generamos el arreglo que contendra las preguntas 
         ArrayList<Pregunta> preguntas=new ArrayList<Pregunta>();
- //Primero generamis cada opcion de la primera pregunta
+ //Primero generamos cada opcion de la primera pregunta
  
     Opcion op11=new Opcion("Moscu",false);
     Opcion op21=new Opcion("Kiev",false);
