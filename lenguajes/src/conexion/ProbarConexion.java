@@ -5,21 +5,32 @@
  */
 package conexion;
 import java.sql.*;
-/**
- *
- * @author T-102
- */
+
 public class ProbarConexion {
+
+    
     public static void main(String[] args) {
+        Connection con=null; //se declara con un valor de defecto "!null"
         try{
-       Conexion.conectarse("login", "");
+      con= Conexion.conectarse("root", "");
             System.out.println("te conectaste");
+            //aqui vienen queries de MYSQL
+            
         }catch(ClassNotFoundException e){
+            System.out.println("No se cargo bien el driver");
             
         }catch(SQLException e){
-            
+            System.out.println("Un error de sql"+e.getMessage());
         }finally{
-            
+            try {
+                if(con!=null)con.close();
+          
+                System.out.println("ya se cerro todo");
+            } catch (SQLException ex) {
+               
+            }
         }
+            
+        
     }
 }
